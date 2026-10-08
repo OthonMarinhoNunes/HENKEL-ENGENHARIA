@@ -1,0 +1,56 @@
+body{
+    background: black;
+    color: goldenrod;
+}
+
+header{
+    margin-left: 1vw;
+    text-align: center;
+}
+
+p{
+    text-align: center;
+}
+
+h2{
+    text-align: center;
+}
+
+pre{
+    text-align: justify;
+}
+
+h3{
+    text-align: center;
+}
+
+h4{
+    text-align: center;
+}
+
+#img2{
+    margin-left: 200px;
+    height: 300px;
+    border-radius: 10px;
+}
+
+video {
+    object-fit: cover;
+}
+
+#meuVideo{
+    height: 305px;
+    width: 200px;
+    margin-left: 200px;
+    border-radius: 10px;
+}
+
+a{
+    text-decoration: none;
+    color: ghostwhite;
+}
+
+#video02{
+    margin-left: 400px;
+    border-radius: 10px;
+}

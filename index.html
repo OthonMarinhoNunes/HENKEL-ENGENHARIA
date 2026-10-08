@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+
+    <title>Henkel Engenharia - Do Financiamento À Casa Pronta</title>
+</head>
+
+<body>
+    <header>
+        <img id="img1" src="./assets/logotipo.png">
+        <p>
+            Do financiamento à casa pronta<br>
+            Você cria o sonho. Nós cuidamos da engenharia.<br>
+            A Henkel acompanha sua construção desde o planejamento até a entrega da obra.
+        </p>
+    </header><br>
+    <main>
+        <p class="p1">
+            Você não precisa entender de construção.
+            Você precisa de alguém que entenda.
+            Você acompanha o sonho de ter sua casa.<br>
+            A Henkel acompanha a engenharia necessária para transformar esse sonho em realidade.
+
+        </p><br>
+        <p class="p2">
+            Construa sua casa financiada com acompanhamento de engenharia do início ao fim.
+            <br>
+            Do projeto à execução, acompanhamos sua obra para que você tenha mais controle, organização e segurança
+            em cada etapa da construção.
+            <br>
+
+            +7 anos de experiência no mercado da engenharia
+        </p>
+<br><br>
+        <h2>Você conseguiu o financiamento. E agora?</h2>
+
+        <p>
+Conseguir o financiamento é apenas o começo. Agora vem a parte que realmente preocupa:
+<pre>
+                                                                                Quem vai cuidar da obra?
+                                                                                O dinheiro vai ser suficiente?
+                                                                                A obra vai seguir o cronograma?
+                                                                                Vou conseguir controlar os materiais?
+                                                                                E se aparecer um problema durante a execução?
+
+                                                                                É aqui que entra a Henkel Engenharia.
+ </pre>
+</p>
+
+
+<br><br>
+        <h3>01 — Planejamento</h3>
+        <p class="lista1">Entendemos o projeto, orçamento e condições da construção financiada.</p>
+
+        <h3>02 — Organização da obra</h3>
+
+        <p class="lista1">Planejamento das etapas, materiais, mão de obra e execução.</p>
+
+        <h3>03 — Execução</h3>
+
+        <p class="lista1">Acompanhamento técnico da construção conforme o projeto.</p>
+
+        <h3>04 — Controle</h3>
+
+        <p class="lista1">Acompanhamento do avanço físico e financeiro da obra.</p>
+
+        <h3>05 — Entrega</h3>
+
+        <p class="lista1">Uma obra planejada, acompanhada e executada com responsabilidade técnica.</p>
+<br><br><br>
+
+        <h3>Seu dinheiro precisa virar obra.<br>
+
+            Não basta ter o financiamento. É preciso saber administrar a construção.<br>
+
+            Uma obra sem planejamento pode gerar:</h3>
+
+        <p>
+            - desperdício de materiais<br>
+            - compras desnecessárias<br>
+            - atrasos<br>
+            - retrabalho<br>
+            - falta de controle financeiro<br>
+            - problemas na execução<br>
+        </p>
+        <h4> Nosso trabalho é ajudar você a transformar o recurso financiado em uma obra bem executada.</h4>
+
+<br><br>
+
+        <h2> Quem está por trás da Henkel?</h2>
+        <section>
+            <img id="img2" src="./assets/responsavel.png">
+            <video id="meuVideo" loop>
+                <source src="./assets/apresentação.mp4" type="video/mp4">
+            </video>
+
+
+            <p><em>"Obra de verdade exige presença de verdade."</em></p>
+            <p> Engenheiro Paulo Cezar há mais de 7 anos atuando na engenharia, acompanhando de perto a execução de
+                obras e desafios que
+                aparecem no dia a dia.
+                <br>
+                Na Henkel Engenharia, acredito que construir não é apenas levantar paredes. É planejar, acompanhar,
+                controlar e tomar as decisões certas durante todo o processo.
+
+                <br><br><h4>O que você recebe?</h4>
+            </p>
+<pre>
+                                                                                ✔ Planejamento da obra
+
+                                                                                ✔ Acompanhamento técnico
+
+                                                                                ✔ Controle da execução
+
+                                                                                ✔ Orientação na compra de materiais
+
+                                                                                ✔ Acompanhamento do cronograma
+
+                                                                                ✔ Responsabilidade técnica<br>
+</pre>
+            <p>
+                Sua casa financiada começa muito antes da primeira parede.
+                Começa com planejamento. <br>
+                Se você está prestes a construir sua casa financiada
+                ou já está com o financiamento aprovado, fale com a
+                Henkel Engenharia.
+            </p>
+
+            <p> Henkel Engenharia<br>
+                Planejamento. Execução. Controle. Engenharia.
+            </p>
+        </section>
+    </main>
+    <section>
+        <p>Verifique nossa página no Instagram. <a
+                href="https://www.instagram.com/henkel_engenharia/">@Henkel_Engenharia</a></p>
+    </section>
+    <section>
+        <video id="video02" src="./assets/video_promossional.mp4" autoplay loop height="200px" width="500">
+    </section>
+    </video>
+
+
+</body>
+
+<script>
+    // Seleciona o elemento de vídeo pelo ID
+    const video = document.getElementById('meuVideo');
+
+    // Configura o observador
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            // Se o vídeo estiver visível na tela
+            if (entry.isIntersecting) {
+                video.play().catch(error => {
+                    console.log("O autoplay foi bloqueado ou falhou:", error);
+                });
+            } else {
+                // Se saiu da tela, pausa o vídeo
+                video.pause();
+            }
+        });
+    }, {
+        // Define que o vídeo precisa estar pelo menos 50% (0.5) visível na tela para rodar
+        threshold: 0.5
+    });
+
+    // Começa a monitorar o vídeo
+    observer.observe(video);
+
+
+
+    // Seleciona o elemento de vídeo pelo ID
+    const video02 = document.getElementById('video02');
+
+    // Configura o observador
+    const observer02 = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            // Se o vídeo estiver visível na tela
+            if (entry.isIntersecting) {
+                video02.play().catch(error => {
+                    console.log("O autoplay foi bloqueado ou falhou:", error);
+                });
+            } else {
+                // Se saiu da tela, pausa o vídeo
+                video02.pause();
+            }
+        });
+    }, {
+        // Define que o vídeo precisa estar pelo menos 50% (0.5) visível na tela para rodar
+        threshold: 0.5
+    });
+
+    // Começa a monitorar o vídeo
+    observer02.observe(video02);
+
+
+</script>
+
+</html>
