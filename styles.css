@@ -1,34 +1,31 @@
-body{
+
+body {
     background: black;
     color: goldenrod;
 }
 
-header{
+header {
     margin-left: 1vw;
     text-align: center;
 }
 
-p{
+p {
     text-align: center;
 }
 
-h2{
+h2 {
     text-align: center;
 }
 
-pre{
-    text-align: justify;
-}
-
-h3{
+h3 {
     text-align: center;
 }
 
-h4{
+h4 {
     text-align: center;
 }
 
-#img2{
+#img2 {
     margin-left: 200px;
     height: 300px;
     border-radius: 10px;
@@ -38,19 +35,94 @@ video {
     object-fit: cover;
 }
 
-#meuVideo{
+#meuVideo {
     height: 305px;
     width: 200px;
     margin-left: 200px;
     border-radius: 10px;
 }
 
-a{
+a {
     text-decoration: none;
     color: ghostwhite;
 }
 
-#video02{
+#video02 {
+    width: 500px;
     margin-left: 400px;
     border-radius: 10px;
+    height: 300px; /* Corrigido: adicionado ponto e vírgula esquecido */
+}
+
+/* 🛠️ CONTROLE DE VERSÃO: Por padrão (computador), esconde os vídeos mobile */
+.video-mobile {
+    display: none;
+}
+
+
+/* ==========================================
+   2. ESTILOS PARA MOBILE (CELULAR E TABLET)
+   ========================================== */
+@media (max-width: 768px) {
+    
+    body {
+        display: flex;
+        flex-direction: column;   /* Empilha os elementos verticalmente */
+        align-items: center;      /* Centraliza tudo na tela do celular */
+        padding: 20px;   
+        
+        /* 🛠️ SEURANÇA ANTITRACEJADO: Desativa bordas indesejadas no mobile */
+        border: none !important;
+        outline: none !important;
+    }
+
+    /* 🛠️ ALTERNADOR DE MÍDIAS: Oculta os vídeos de desktop e exibe os com controles */
+    .video-desktop {
+        display: none !important;
+    }
+    .video-mobile {
+        display: block !important;
+    }
+
+    /* IMAGEM DO RESPONSÁVEL */
+    #img2 {
+        display: block;
+        width: 80vw;              
+        max-width: 320px;         
+        height: auto;             
+        border-radius: 10px;
+        
+        /* 🛠️ ESPAÇAMENTO EXATO: Zera lados/topo e cria 20px abaixo para empurrar o vídeo */
+        margin-top: 0;
+        margin-right: 0;
+        margin-left: 0;
+        margin-bottom: 20px; 
+        
+        border: none !important;
+        outline: none !important;
+    }
+
+    /* VÍDEO PRINCIPAL COM CONTROLES (#meuVideoMobile) */
+    #meuVideoMobile {
+        width: 80vw;
+        max-width: 320px;
+        height: 350px;
+        margin: 0;                /* Remove os 200px de margem do desktop */
+        border-radius: 10px;
+        
+        border: none !important;
+        outline: none !important;
+    }
+
+    /* SEGUNDO VÍDEO COM CONTROLES (#video02Mobile) */
+    #video02Mobile {
+        width: 70vw;
+        max-width: 420px;
+        height: 300px;
+        margin: 0;                /* Remove os 400px de margem do desktop */
+        border-radius: 10px;
+        
+        border: none !important;
+        outline: none !important;
+    }
 }

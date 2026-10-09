@@ -40,16 +40,16 @@
 
         <p>
 Conseguir o financiamento é apenas o começo. Agora vem a parte que realmente preocupa:
-<pre>
-                                                                                Quem vai cuidar da obra?
-                                                                                O dinheiro vai ser suficiente?
-                                                                                A obra vai seguir o cronograma?
-                                                                                Vou conseguir controlar os materiais?
-                                                                                E se aparecer um problema durante a execução?
-
-                                                                                É aqui que entra a Henkel Engenharia.
- </pre>
 </p>
+<p class="p01">
+Quem vai cuidar da obra?<br>
+O dinheiro vai ser suficiente?<br>
+A obra vai seguir o cronograma?<br>
+Vou conseguir controlar os materiais?<br>
+E se aparecer um problema durante a execução?<br><br>
+
+É aqui que entra a Henkel Engenharia.
+ </p>
 
 
 <br><br>
@@ -84,7 +84,7 @@ Conseguir o financiamento é apenas o começo. Agora vem a parte que realmente p
             - compras desnecessárias<br>
             - atrasos<br>
             - retrabalho<br>
-            - falta de controle financeiro<br>
+            - falta of controle financeiro<br>
             - problemas na execução<br>
         </p>
         <h4> Nosso trabalho é ajudar você a transformar o recurso financiado em uma obra bem executada.</h4>
@@ -94,7 +94,14 @@ Conseguir o financiamento é apenas o começo. Agora vem a parte que realmente p
         <h2> Quem está por trás da Henkel?</h2>
         <section>
             <img id="img2" src="./assets/responsavel.png">
-            <video id="meuVideo" loop>
+            
+            <!-- VÍDEO PRINCIPAL: VERSÃO DESKTOP (Autoplay) -->
+            <video id="meuVideo" class="video-desktop" autoplay loop muted playsinline>
+                <source src="./assets/apresentação.mp4" type="video/mp4">
+            </video>
+
+            <!-- VÍDEO PRINCIPAL: VERSÃO MOBILE (Com Controles e Sem Autoplay) -->
+            <video id="meuVideoMobile" class="video-mobile" controls>
                 <source src="./assets/apresentação.mp4" type="video/mp4">
             </video>
 
@@ -107,21 +114,16 @@ Conseguir o financiamento é apenas o começo. Agora vem a parte que realmente p
                 Na Henkel Engenharia, acredito que construir não é apenas levantar paredes. É planejar, acompanhar,
                 controlar e tomar as decisões certas durante todo o processo.
 
-                <br><br><h4>O que você recebe?</h4>
-            </p>
-<pre>
-                                                                                ✔ Planejamento da obra
-
-                                                                                ✔ Acompanhamento técnico
-
-                                                                                ✔ Controle da execução
-
-                                                                                ✔ Orientação na compra de materiais
-
-                                                                                ✔ Acompanhamento do cronograma
-
-                                                                                ✔ Responsabilidade técnica<br>
-</pre>
+                <br><br></p><h4>O que você recebe?</h4>
+            
+<p class="p01">
+✔ Planejamento da obra<br><br>
+✔ Acompanhamento técnico<br><br>
+✔ Controle da execução<br><br>
+✔ Orientação na compra de materiais<br><br>
+✔ Acompanhamento do cronograma<br><br>
+✔ Responsabilidade técnica<br>
+</p>
             <p>
                 Sua casa financiada começa muito antes da primeira parede.
                 Começa com planejamento. <br>
@@ -139,66 +141,51 @@ Conseguir o financiamento é apenas o começo. Agora vem a parte que realmente p
         <p>Verifique nossa página no Instagram. <a
                 href="https://www.instagram.com/henkel_engenharia/">@Henkel_Engenharia</a></p>
     </section>
+    
     <section>
-        <video id="video02" src="./assets/video_promossional.mp4" autoplay loop height="200px" width="500">
+        <!-- SEGUNDO VÍDEO: VERSÃO DESKTOP (Autoplay) -->
+        <video id="video02" class="video-desktop" autoplay loop muted playsinline>
+            <source src="./assets/video_promossional.mp4" type="video/mp4">
+        </video>
+
+        <!-- SEGUNDO VÍDEO: VERSÃO MOBILE (Com Controles e Sem Autoplay) -->
+        <video id="video02Mobile" class="video-mobile" controls>
+            <source src="./assets/video_promossional.mp4" type="video/mp4">
+        </video>
     </section>
-    </video>
 
 
 </body>
 
 <script>
-    // Seleciona o elemento de vídeo pelo ID
+    // Mantendo os seus scripts funcionando normalmente para a versão Desktop
     const video = document.getElementById('meuVideo');
+    if (video) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    video.play().catch(error => console.log("Autoplay bloqueado:", error));
+                } else {
+                    video.pause();
+                }
+            });
+        }, { threshold: 0.5 });
+        observer.observe(video);
+    }
 
-    // Configura o observador
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            // Se o vídeo estiver visível na tela
-            if (entry.isIntersecting) {
-                video.play().catch(error => {
-                    console.log("O autoplay foi bloqueado ou falhou:", error);
-                });
-            } else {
-                // Se saiu da tela, pausa o vídeo
-                video.pause();
-            }
-        });
-    }, {
-        // Define que o vídeo precisa estar pelo menos 50% (0.5) visível na tela para rodar
-        threshold: 0.5
-    });
-
-    // Começa a monitorar o vídeo
-    observer.observe(video);
-
-
-
-    // Seleciona o elemento de vídeo pelo ID
     const video02 = document.getElementById('video02');
-
-    // Configura o observador
-    const observer02 = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            // Se o vídeo estiver visível na tela
-            if (entry.isIntersecting) {
-                video02.play().catch(error => {
-                    console.log("O autoplay foi bloqueado ou falhou:", error);
-                });
-            } else {
-                // Se saiu da tela, pausa o vídeo
-                video02.pause();
-            }
-        });
-    }, {
-        // Define que o vídeo precisa estar pelo menos 50% (0.5) visível na tela para rodar
-        threshold: 0.5
-    });
-
-    // Começa a monitorar o vídeo
-    observer02.observe(video02);
-
-
+    if (video02) {
+        const observer02 = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    video02.play().catch(error => console.log("Autoplay bloqueado:", error));
+                } else {
+                    video02.pause();
+                }
+            });
+        }, { threshold: 0.5 });
+        observer02.observe(video02);
+    }
 </script>
 
 </html>
